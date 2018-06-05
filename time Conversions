@@ -1,0 +1,21 @@
+#!/bin/python3
+T=input()
+a=T.split(':')
+x=int(a[0])
+y=a[2][-2]
+if(y=='P' and x!=12):
+    x=x+12
+if(y=='A' and x==12):
+    x=0
+b=[]
+if(x<10):
+    x='0'+str(x)
+    
+b.append(x)
+b.append(':')
+b.append(a[1])
+b.append(':')
+b.append(a[2][0])
+b.append(a[2][1])
+str1 = ''.join(str(e) for e in b)
+print(str1)
